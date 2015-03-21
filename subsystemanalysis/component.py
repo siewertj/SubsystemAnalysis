@@ -1,3 +1,12 @@
+import json
+
+
+def obj_to_json_simple_(cls):
+	""" converts a class object to a json object. This is pretty generic in that
+	it just makes a json object based on the class member vars. """
+	return json.dumps(cls, default=lambda o: o.__dict__, sort_keys=True, indent=2)
+
+
 
 class Atomic:
 	""" Represents a part that is not broken up into smaller components.
@@ -9,6 +18,9 @@ class Atomic:
 	def __str__(self):
 		return self.name
 
+	def json(self):
+		return obj_to_json_simple_(self)
+
 	@classmethod
 	def from_dictionary(cls, dct):
 		""" Reads the required components from a dictionary (python map). This
@@ -18,6 +30,7 @@ class Atomic:
 		x.weight = dct.get('weight', 0)
 		x.cost = dct.get('cost', 0)
 		return x
+
 
 
 class Complex:
@@ -31,6 +44,9 @@ class Complex:
 	def __str__(self):
 		return self.name
 
+	def json(self):
+		return obj_to_json_simple_(self)
+
 	@classmethod
 	def from_dictionary(cls, dct):
 		""" Reads the required components from a dictionary (python map). This
@@ -39,5 +55,4 @@ class Complex:
 		x.type = str(dct.get('type', None))
 		x.components = dct.get('components', None)
 		return x
-
-
+		
