@@ -1,0 +1,33 @@
+{
+	"atomic_components": [
+
+		{
+			"name": "transistor",
+			"type": "atomic",
+			"weight": 10,
+			"cost": 20
+		},
+		{
+			"name": "speaker",
+			"type": "atomic",
+			"weight": 32,
+			"cost": 55
+		}
+
+	],
+
+
+	"complex_components": [
+
+		{
+			"name": "shooter",
+			"type": "complex",
+			"components": {
+				"transistor": 4,
+				"speaker": 1
+			}
+		}
+
+	]
+
+}

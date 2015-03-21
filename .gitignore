@@ -45,3 +45,4 @@ Temporary Items
 
 # Python Compilation Files
 *.egg-info
+*.pyc

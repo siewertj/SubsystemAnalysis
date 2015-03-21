@@ -16,6 +16,7 @@ class ComplexComponent:
 		x.components = dct.get('components', None)
 		return x
 
+'''
 	def to_json(self):
 		return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
 
@@ -35,3 +36,4 @@ for x in jsondata['complex_components']:
 	tmp = x.to_json()
 	print(tmp)
 	#print(x.to_json())
+'''
