@@ -1,0 +1,14 @@
+{
+	"complex_components": [
+
+		{
+			"type": "complex",
+			"name": "shooter",
+			"components": {
+				""
+			}
+		}
+
+	]
+
+}
