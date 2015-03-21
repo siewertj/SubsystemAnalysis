@@ -1,5 +1,4 @@
-from . import atomic
-from . import complex
+from . import component
 
 import json
 
@@ -12,11 +11,11 @@ def json_loadhook(dct):
 	if 'type' in dct:
 		if dct['type'] == "atomic":
 			print('found atomic component')
-			return atomic.AtomicComponent.from_dictionary(dct)
+			return component.Atomic.from_dictionary(dct)
 
 		elif dct['type'] == "complex":
 			print('found complex component')
-			return complex.ComplexComponent.from_dictionary(dct)
+			return component.Complex.from_dictionary(dct)
 		
 	return dct
 
