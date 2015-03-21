@@ -19,3 +19,8 @@ def json_loadhook(dct):
 			return complex.ComplexComponent.from_dictionary(dct)
 		
 	return dct
+
+
+class Analyzer:
+	def __init__(self):
+		pass
